@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>MAINPAGE</h2>
+
+<!--시큐리티에서 전달된 내용을 타임리프가 인식하고 받아내기 위한 라이브러리 추가했음-->
+<!-- sec:authentication="name" : 접속한 유저네임 -->
+<!-- sec:authentication="authorities":역할(권한)-->
+
+접속한 Email : <span sec:authentication="name"></span><br>
+권한(Role) : <span sec:authentication="authorities"></span><br>
+
+<a href="/admin"> Admin Page </a>
+<a href="/member"> Member Page </a>
+<hr>
+<!-- 로그아웃 받으면 컨트롤러에서 처리-->
+<a href="/logout">로그아웃</a>
+
+</body>
+</html>

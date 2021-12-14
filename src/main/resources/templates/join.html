@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+<h2>회원가입</h2>
+<!--컨트롤러 /joinproc.do로 던지고 dto로 받아서 처리-->
+<form action="/joinproc" method="POST">
+  EMAIL : <input type="text" name="email"><br>
+  PW : <input type="password" name="password"><br>
+    <!--콤바를 기준으로 짤리기 때문에 배열 형태로 리다이렉트 됨-->
+  <input type="radio" name="auth" value="ROLE_ADMIN,ROLE_USER">ADMIN<br>
+  <input type="radio" name="auth" value="ROLE_USER">USER<br>
+  <input type="submit" value="가입">
+</form>
+</body>
+</html>
